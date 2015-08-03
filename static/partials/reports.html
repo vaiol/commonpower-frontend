@@ -1,0 +1,43 @@
+﻿<div class="grey lighten-2">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col s12 m10 l8 offset-m1 offset-l2">
+				<div class="card white cards-margin" id="top-row">
+					<div class="card-content">
+						<h6 class="card-title blue-text text-lighten-2 center" style="font-size: 3em;font-weight: 500;">Звіти</h6>
+						
+						<p>Бути в курсі всіх подій можна легко перебуваючи на цій сторінці, адже тут буде з'являтися лише актуальне та цікаве!</p>
+					</div>
+					<div class="card-action">
+		              	<a href="#/reports#nav-row">До навігації</a>
+		            </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+		   	<div class="col s12 m10 l8 offset-m1 offset-l2">
+		     	<div class="card" dir-paginate="news in newsList | filter:q | itemsPerPage: pageSize"  total-items="total" current-page="currentPage">
+			       	<div class="card-image">
+			         	<img ng-src="{{news.img}}">
+			         	<span class="card-title">{{news.title}}</span>
+			       	</div>
+			       	<div class="card-content">
+			         	<p>{{news.preview}}</p>
+			       	</div>
+			       	<div class="card-action">
+			         	<a href="#">{{common.details}}</a>
+			       	</div>
+		   		</div>
+			</div>
+		</div>
+
+		<div class="row" id="nav-row">
+			<div class="col s12 center">
+    			<dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="partials/dirPagination.tpl.html"></dir-pagination-controls>
+    		</div>
+        </div>
+		<div class="row nomar-bottom"></div>
+	</div>
+</div>

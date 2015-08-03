@@ -1,0 +1,25 @@
+<div class="wcent">
+    <ul class="pagination" ng-if="1 < pages.length" style="display: inline-block;
+      margin: 0 auto;
+      padding: 0;
+      /* For IE, the outcast */
+      zoom:1;
+      *display: inline;">
+        <li ng-if="boundaryLinks" ng-class="{ disabled : pagination.current == 1 }" class="waves-effect">
+            <a href="" ng-click="setCurrent(1)">&laquo;</a>
+        </li>
+        <li ng-if="directionLinks" ng-class="{ disabled : pagination.current == 1 }"  class=" waves-effect">
+            <a href="" ng-click="setCurrent(pagination.current - 1)">‹</a>
+        </li>
+        <li ng-repeat="pageNumber in pages track by $index" ng-class="{ active : pagination.current == pageNumber, disabled : pageNumber == '...' }" class="waves-effect">
+            <a href="" ng-click="setCurrent(pageNumber)">{{ pageNumber }}</a>
+        </li>
+
+        <li ng-if="directionLinks" ng-class="{ disabled : pagination.current == pagination.last }"  class="waves-effect">
+            <a href="" ng-click="setCurrent(pagination.current + 1)">›</a>
+        </li>
+        <li ng-if="boundaryLinks"  ng-class="{ disabled : pagination.current == pagination.last }"  class="waves-effect">
+            <a href="" ng-click="setCurrent(pagination.last)">&raquo;</a>
+        </li>
+    </ul>
+</div>

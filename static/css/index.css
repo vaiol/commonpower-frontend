@@ -1,0 +1,188 @@
+[ng\:cloak], [ng-cloak], .ng-cloak {
+         display: none !important;
+}
+header {
+  z-index: 100;
+}
+
+footer {
+  z-index: 100;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 500px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+#help-button {
+  margin-top: 14px;
+  margin-right: .2vw;
+}
+@media only screen and (min-width : 992px) {
+  #logo-container {
+    margin-left: .2vw;
+    width: 30%;
+  }
+}
+
+#headerSearch {
+  display: inline-block;
+  width: 290px;
+  float: right;
+  height: 36px;
+  margin-top: 14px;
+  margin-right: 14px;
+  cursor: pointer;
+  line-height: 49px;
+  cursor: text;
+}
+
+#headerSearch:hover {
+  background: red;
+}
+
+#search-box {
+  max-height: 30px;
+}
+
+
+#searchh {
+  color: red;
+}
+
+.main-text {
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+#socials img {
+  max-height: 45px;
+  margin: 3px;
+}
+
+
+.collection-item img {
+  border-radius: 0;
+}
+
+.small-item {
+  height: 42px;
+}
+
+
+.waves-hover:hover {
+  background-color: rgba(244, 67, 54, 0.7);
+}
+
+
+
+.waves-hover-light:hover {
+  background-color: rgba(244, 244, 244, 0.4);
+}
+
+
+@media only screen and (max-width : 1900px) {
+  .responsive-text {
+  width: 90%;
+}}
+
+@media only screen and (max-width : 2000px) and (min-width: 992px) {
+.responsive-text a {
+  font-size: 1.1vw;
+}}
+
+@media only screen and (max-width : 500px) {
+  .responsive-collection {
+    font-size: 4vw;
+  }
+  .collection .collection-item.avatar .title {
+    font-size: 3.5vw;
+  }
+}
+
+.nomar-bottom {
+  margin-bottom: 0;
+}
+
+/*@media only screen and (min-width : 992px) {*/
+.wcent {
+      text-align: center;
+  }
+  .wcent ul {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 0;
+      /* For IE, the outcast */
+      zoom:1;
+      *display: inline;
+  }
+  .wcent li {
+      float: left;
+      padding: 2px 5px;
+  }
+/*}*/
+
+.pagination a {
+  height: 100%;
+  width: 100%;
+
+}
+
+.cards-margin {
+  margin-top: 40px;
+  margin-bottom: -10px;
+}

@@ -1,0 +1,137 @@
+﻿<div class="parallax-container valign-wrapper">
+    <div class="container valign">
+        <h2 class="header center light-blue-text text-lighten-1" ng-bind="pc.c1_header"></h2>
+        <div class="row center">
+        <h5 class="header col s12 light"  ng-bind="pc.c1_info"></h5>
+        </div>
+        <div class="row center">
+            <a ng-click="scrollTo('info')" id="download-button" class="btn-large waves-effect waves-light light-blue lighten-1" ng-bind="pc.c1_btn"></a>
+        </div>
+    </div>
+    <div class="parallax">
+        <img ng-src="{{pc.c1_background}}" alt="background image part 1">
+    </div>
+</div>
+
+<div class="container" id="info">
+    <div class="row">
+        <div class="col s12 m4">
+            <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons" ng-bind="pc.c2_logo_1"></i></h2>
+                <h5 class="center" ng-bind="pc.c2_header_1"></h5>
+                <p class="light" ng-bind="pc.c2_info_1"></p>
+            </div>
+        </div>
+
+        <div class="col s12 m4">
+            <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons" ng-bind="pc.c2_logo_2"></i></h2>
+                <h5 class="center" ng-bind="pc.c2_header_2"></h5>
+                <p class="light" ng-bind="pc.c2_info_2"></p>
+            </div>
+        </div>
+
+        <div class="col s12 m4">
+            <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons" ng-bind="pc.c2_logo_3"></i></h2>
+                <h5 class="center" ng-bind="pc.c2_header_3"></h5>
+                <p class="light" ng-bind="pc.c2_info_3"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper">
+    <div class="container valign">
+        <h2 class="header center light-blue-text text-lighten-1" ng-bind="pc.c3_header"></h2>
+        <div class="row center">
+            <h5 class="header col s12 light" ng-bind="pc.c3_info"></h5>
+        </div>
+    </div>
+    <div class="parallax">
+        <img ng-src="{{pc.c3_background}}" alt="background image part 2">
+    </div>
+</div>
+
+<div class="container">
+    <h3 class="center light-blue-text text-lighten-1" ng-bind="pc.c4_header"></h3>
+    <div class="row">
+        <div class="col s12 l6 container">
+            <h4 class="center light-blue-text text-lighten-1" ng-bind="pc.c4_fighters"></h4>
+            <ul class="collection responsive-collection">
+                <li class="collection-item avatar" ng-repeat="fighter in fighters">
+                    <img  ng-src="{{fighter.img}}" alt="face" class="circle" style="height: 60px;">
+                    <span class="title">{{fighter.title}}</span>
+                    <p>{{fighter.info}}</p>
+                    <a href="#!" class="secondary-content">{{fighter.count}}$</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col s12 l6 container">
+            <h4 class="center light-blue-text text-lighten-1" ng-bind="pc.c4_benefactor"></h4>
+            <ul class="collection responsive-collection">
+                <li class="collection-item small-item" ng-repeat="benefactor in benefactors">
+                    <div>{{benefactor.name}}
+                        <span class="secondary-content">{{benefactor.count}}$</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 center">
+            <a href="#/" class="waves-effect waves-hover waves-red lighten-2 btn-flat" ng-bind="pc.c4_btn"></a>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container">
+    <div class="container">
+        <h2 class="header center" ng-bind="pc.c5_header"></h2>
+        <div class="row">
+            <div class="col s12 l4" ng-repeat="news in newsList">
+                <div class="card card-height hoverable">
+                    <div class="card-image">
+                        <img ng-src="{{news.img}}" height="223vh">
+                        <span class="card-title">{{news.title}}</span>
+                    </div>
+                    <div class="card-content grey-text">
+                        <p>{{news.preview}}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" ng-bind="common.details"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="col s12 center">
+                <a href="#/reports" class="waves-effect waves-hover-light waves-light btn-flat white-text" ng-bind="pc.c5_btn"></a>
+            </div>
+        </div>
+    </div>
+    <div class="parallax">
+        <img ng-src="{{pc.c5_background}}" alt="background part 3">
+    </div>
+</div>
+
+<div class="container">
+    <h3 class="center light-blue-text text-lighten-1" ng-bind="pc.c6_header"></h3>
+    <div class="row hide-on-med-and-down valign-wrapper">
+        <div class="col s4 l2 valign" ng-repeat="org in organizations track by $index">
+            <img ng-src="{{org.img}}" alt="fond-logo" class="responsive-img">
+        </div>
+    </div>
+
+    <div class="row valign-wrapper hide-on-large-only">
+        <div class="col s4 valign" ng-repeat="org in organizationsP1 track by $index">
+            <img ng-src="{{org.img}}" alt="fond-logo" class="responsive-img">
+        </div>
+    </div>
+    <div class="row valign-wrapper hide-on-large-only">
+        <div class="col s4 valign" ng-repeat="org in organizationsP2 track by $index">
+            <img ng-src="{{org.img}}" alt="fond-logo" class="responsive-img">
+        </div>
+    </div>
+</div>
