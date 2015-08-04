@@ -198,3 +198,44 @@ footer.page-footer {
 @media only screen and (min-width : 993px) {
   .container-xl {
     width: 90%; } }
+
+
+
+/* label underline focus color */
+textarea.materialize-textarea:focus:not([readonly]), .input-field input[type=text]:focus, .input-field input[type=email]:focus {
+  border-bottom: 1px solid #FF9F9F;
+  box-shadow: 0 1px 0 0 #FF9F9F;
+}
+
+
+
+/* icon prefix color */
+.input-field .prefix {
+  color: #FF9F9F;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #29B6F6;
+}
+
+
+/* label focus color */
+ textarea.materialize-textarea:focus:not([readonly]) + label, .input-field input[type=text]:focus + label, .input-field input[type=email]:focus + label {
+  color: #FF9F9F;
+} 
+
+
+/* valid color */
+textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid, .input-field input[type=text].valid, .input-field input[type=email].valid  {
+  border-bottom: 1px solid #29B6F6;
+  box-shadow: 0 1px 0 0 #29B6F6;
+}
+
+
+textarea
+/* invalid color */
+.input-field input[type=text].invalid, .input-field input[type=email].invalid {
+  border-bottom: 1px solid #F00;
+  box-shadow: 0 1px 0 0 #F00;
+}
