@@ -6,7 +6,8 @@
     "angular-route": null,
     "angular-mocks": null,
     "materialize": null,
-    "angular-utils-pagination": null
+    "angular-utils-pagination": null,
+    "angular-materialize": null
   },
   "resolutions": {
     "angular": "1.3.16"

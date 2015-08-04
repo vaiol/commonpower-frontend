@@ -1,4 +1,5 @@
 ﻿myApp.controller('become', ['$scope', '$route', function($scope, $route) {
-    //activate jquery plugin (materialize design)
-    
+	 	$('ul.tabs').tabs();
+	 	$('ul.tabs').tabs('select_tab', 'test1');
+ 
 }]);

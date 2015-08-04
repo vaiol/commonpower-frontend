@@ -1,172 +1,190 @@
 ﻿<div class="container">
-    <h4>Зареєструватися як боєць</h4>
     <div class="row">
-        <form class="col s12">
+        <div class="col s12">
+            <ul class="tabs" tabs>
+                <li class="tab col s4"><a class="active" href="#test1">Зареєструватися як боєць</a></li>
+                <li class="tab col s4"><a href="#test2">Зареєструвати житло</a></li>
+                <li class="tab col s4"><a href="#test3">Зареєструвати благодійну організацію</a></li>
+            </ul>
+        </div>
+        <div class="col s12" id="test1">
+            <h4>Зареєструватися як боєць</h4>
             <div class="row">
-                <div class="input-field col s12 l4">
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">Прізвище</label>
-                </div>
-                <div class="input-field col s12 l4">
-                    <input id="first_name" type="text" class="validate">
-                    <label for="first_name">Ім'я</label>
-                </div>
-                <div class="input-field col s12 l4">
-                    <input id="middle_name" type="text" class="validate">
-                    <label for="middle_name">По-батькові</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12 l6">
-                    <i class="material-icons prefix">phone</i>
-                    <input id="phone" type="text" class="validate">
-                    <label for="phone">Контакнтний телефон</label>
-                </div>
-                <div class="input-field col s12 l6">
-                    <i class="material-icons prefix">email</i>
-                    <input id="email" type="email" class="validate">
-                    <label for="email" data-error="невірний email">Email-адреса</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">mode_edit</i>
-                    <textarea  id="wound-field" class="materialize-textarea"></textarea>
-                    <label for="wound-field">Коротко про себе:</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <form action="http://materializecss.com/forms.html/#">
-                        <div class="file-field input-field">
-                            <div class="btn">
-                                <span>Фото</span>
-                                <input type="file">
-                            </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
-                            </div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input id="fighter_last_name" type="text" class="validate">
+                            <label for="fighter_last_name">Прізвище</label>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-    
-<div class="container">
-    <h4>Зареєструвати житло</h4>
-    <div class="row">
-        <form class="col s12">
-            <div class="row">
-                <div class="input-field col s12 l4">
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">Прізвище</label>
-                </div>
-                <div class="input-field col s12 l4">
-                    <input id="first_name" type="text" class="validate">
-                    <label for="first_name">Ім'я</label>
-                </div>
-                <div class="input-field col s12 l4">
-                    <input id="middle_name" type="text" class="validate">
-                    <label for="middle_name">По-батькові</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12 l6">
-                    <i class="material-icons prefix">phone</i>
-                    <input id="phone" type="text" class="validate">
-                    <label for="phone">Контакнтний телефон</label>
-                </div>
-                <div class="input-field col s12 l6">
-                    <i class="material-icons prefix">email</i>
-                    <input id="email" type="email" class="validate">
-                    <label for="email" data-error="невірний email">Email-адреса</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">mode_edit</i>
-                    <textarea  id="wound-field" class="materialize-textarea"></textarea>
-                    <label for="wound-field">Коротко про себе:</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <form action="http://materializecss.com/forms.html/#">
-                        <div class="file-field input-field">
-                            <div class="btn">
-                                <span>Фото</span>
-                                <input type="file">
-                            </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
-                            </div>
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input id="fighter_first_name" type="text" class="validate">
+                            <label for="fighter_first_name">Ім'я</label>
                         </div>
-                    </form>
-                </div>
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input id="fighter_middle_name" type="text" class="validate">
+                            <label for="fighter_middle_name">По-батькові</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 l6">
+                            <i class="material-icons prefix">phone</i>
+                            <input id="fighter_phone" type="text" class="validate">
+                            <label for="fighter_phone">Контакнтний телефон</label>
+                        </div>
+                        <div class="input-field col s12 l6">
+                            <i class="material-icons prefix">email</i>
+                            <input id="fighter_email" type="email" class="validate">
+                            <label for="fighter_email" data-error="невірний email">Email-адреса</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea  id="fighter_wound-field" class="materialize-textarea"></textarea>
+                            <label for="fighter_wound-field">Коротко про себе:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <form action="#">
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                        <span>Фото</span>
+                                        <input type="file">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
-</div>
+        </div>
 
 
-<div class="container">
-    <h4>Зареєструватися як боєць</h4>
-    <div class="row">
-        <form class="col s12">
+        <div class="col s12" id="test2">
+            <h4>Зареєструвати житло</h4>
             <div class="row">
-                <div class="input-field col s12 l4">
-                    <i class="material-icons prefix">perm_identity</i>
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">Прізвище</label>
-                </div>
-                <div class="input-field col s12 l4">
-                    <i class="material-icons prefix">perm_identity</i>
-                    <input id="first_name" type="text" class="validate">
-                    <label for="first_name">Ім'я</label>
-                </div>
-                <div class="input-field col s12 l4">
-                    <i class="material-icons prefix">perm_identity</i>
-                    <input id="middle_name" type="text" class="validate">
-                    <label for="middle_name">По-батькові</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12 l6">
-                    <i class="material-icons prefix">phone</i>
-                    <input id="phone" type="text" class="validate">
-                    <label for="phone">Контакнтний телефон</label>
-                </div>
-                <div class="input-field col s12 l6">
-                    <i class="material-icons prefix">email</i>
-                    <input id="email" type="email" class="validate">
-                    <label for="email" data-error="невірний email">Email-адреса</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">mode_edit</i>
-                    <textarea  id="wound-field" class="materialize-textarea"></textarea>
-                    <label for="wound-field">Коротко про себе:</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <form action="http://materializecss.com/forms.html/#">
-                        <div class="file-field input-field">
-                            <div class="btn">
-                                <span>Фото</span>
-                                <input type="file">
-                            </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
-                            </div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input id="home_last_name" type="text" class="validate">
+                            <label for="home_last_name">Прізвище</label>
                         </div>
-                    </form>
-                </div>
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input id="home_first_name" type="text" class="validate">
+                            <label for="home_first_name">Ім'я</label>
+                        </div>
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input id="home_middle_name" type="text" class="validate">
+                            <label for="home_middle_name">По-батькові</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 l6">
+                            <i class="material-icons prefix">phone</i>
+                            <input id="home_phone" type="text" class="validate">
+                            <label for="home_phone">Контакнтний телефон</label>
+                        </div>
+                        <div class="input-field col s12 l6">
+                            <i class="material-icons prefix">email</i>
+                            <input id="home_email" type="email" class="validate">
+                            <label for="home_email" data-error="невірний email">Email-адреса</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea  id="home_wound-field" class="materialize-textarea"></textarea>
+                            <label for="home_wound-field">Коротко про себе:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <form action="http://materializecss.com/forms.html/#">
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                        <span>Фото</span>
+                                        <input type="file">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
+
+
+        <div class="col s12" id="test3">
+            <h4>Зареєструвати благодійну організацію</h4>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input id="org_last_name" type="text" class="validate">
+                            <label for="org_last_name">Прізвище</label>
+                        </div>
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input id="org_first_name" type="text" class="validate">
+                            <label for="org_first_name">Ім'я</label>
+                        </div>
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input id="org_middle_name" type="text" class="validate">
+                            <label for="org_middle_name">По-батькові</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 l6">
+                            <i class="material-icons prefix">phone</i>
+                            <input id="org_phone" type="text" class="validate">
+                            <label for="org_phone">Контакнтний телефон</label>
+                        </div>
+                        <div class="input-field col s12 l6">
+                            <i class="material-icons prefix">email</i>
+                            <input id="org_email" type="email" class="validate">
+                            <label for="org_email" data-error="невірний email">Email-адреса</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea  id="org_wound-field" class="materialize-textarea"></textarea>
+                            <label for="org_wound-field">Коротко про себе:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <form action="http://materializecss.com/forms.html/#">
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                        <span>Фото</span>
+                                        <input type="file">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </div>
 </div>
-
