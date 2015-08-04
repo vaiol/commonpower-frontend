@@ -185,3 +185,16 @@ footer.page-footer {
   margin-top: 40px;
   margin-bottom: -10px;
 }
+
+.container-xl {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 97%; }
+
+@media only screen and (min-width : 601px) {
+  .container-xl {
+    width: 95%; } }
+
+@media only screen and (min-width : 993px) {
+  .container-xl {
+    width: 90%; } }
