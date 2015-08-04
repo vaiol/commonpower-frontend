@@ -44,15 +44,26 @@
                 </ul>
 
                 <ul id="slide-out" class="side-nav">
-                    <li class="active"><a href="#/" ng-bind="pc.header_home"></a></li>
-                    <li><a href="#/reports" ng-bind="pc.header_reports"></a></li>
-                    <li><a href="#" ng-bind="pc.become"></a></li>
-                    <li><a href="#" ng-bind="pc.header_contacts"></a></li>
-                    <li><a href="#" ng-bind="pc.header_about"></a></li>
-                    <li><a href="#" ng-bind="pc.header_help"></a></li>
-                    <li><a href="#"><i class="material-icons" id="searchh">search</i></a></li>
-                  </ul>
-                  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                    <li ng-class="{active: $route.current.activetab == 'home'}">
+                        <a href="#/" ng-bind="pc.header_home"></a>
+                    </li>
+                    <li ng-class="{active: $route.current.activetab == 'reports'}">
+                        <a href="#/reports" ng-bind="pc.header_reports"></a>
+                    </li>
+                    <li ng-class="{active: $route.current.activetab == 'become'}">
+                        <a href="#/become" ng-bind="pc.become"></a>
+                    </li>
+                    <li ng-class="{active: $route.current.activetab == 'contacts'}">
+                        <a href="#/contacts" ng-bind="pc.header_contacts"></a>
+                    </li>
+                    <li ng-class="{active: $route.current.activetab == 'about'}">
+                        <a href="#/about" ng-bind="pc.header_about"></a>
+                    </li>
+                    <li ng-class="{active: $route.current.activetab == 'search'}">
+                        <a href="#/search"><i class="material-icons" id="searchh">search</i></a>
+                    </li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
             
             </div>
         </nav>
