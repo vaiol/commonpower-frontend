@@ -246,3 +246,12 @@ textarea
   padding-bottom: 40px;
   background: #E0E0E0;
 }
+
+#help-button {
+  background: #F44336;
+}
+
+#help-button.active {
+  /*background: #D20000;*/
+  background: #29B6F6;
+}

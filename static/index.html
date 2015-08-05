@@ -23,7 +23,7 @@
                     <img class="responsive-img" src="image/commonpower-logo-1.png" alt="commonpower-logo">
                 </a>
 
-                <a href="#/help" class="valign right waves-effect waves-light btn red hide-on-small-only" id="help-button" ng-bind="pc.header_help"></a>
+                <a href="#/help"  ng-class="{active: $route.current.activetab == 'help'}" class="valign right waves-effect waves-light btn hide-on-small-only" id="help-button" ng-bind="pc.header_help"></a>
                 <ul class="right hide-on-med-and-down">
                     <li ng-class="{active: $route.current.activetab == 'home'}">
                         <a href="#/" ng-bind="pc.header_home"></a>
@@ -61,6 +61,9 @@
                     <li ng-class="{active: $route.current.activetab == 'about'}">
                         <a href="#/about" ng-bind="pc.header_about"></a>
                     </li>
+                    <li ng-class="{active: $route.current.activetab == 'help'}" class="hide-on-med-and-up">
+                        <a href="#/help" ng-bind="pc.header_help"></a>
+                    </li>
                     <li ng-class="{active: $route.current.activetab == 'search'}">
                         <a href="#/search"><i class="material-icons" id="searchh">search</i></a>
                     </li>
@@ -73,7 +76,7 @@
     </header>
 
     <main>
-        <div class="ng-view"></div> 
+        <div class="ng-view" autoscroll="true"></div> 
     </main>
     
 
