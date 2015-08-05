@@ -10,7 +10,7 @@
             </div>
             <div class="container-xl">
                 <div class="col s12" id="test1">
-                    <h4 class="center light-blue-text text-lighten-1">Зареєструватися як боєць</h4>
+                    <h4 class="center light-blue-text text-lighten-1">Зареєструвати бійця</h4>
                     <p class="center">Вкажіть свої контактні данні. Після ретельної обробки ми з вами зв'яжемося для подальших дій.</p>
                     
                     <div class="row">
@@ -82,9 +82,10 @@
                 <div class="col s12" id="test2">
                     <h4 class="center light-blue-text text-lighten-1">Зареєструвати житло</h4>
                     <p class="center">Вкажіть контактні данні власника, а також короткі відомості про житло. Після ретельної обробки ми з вами зв'яжемося для подальших дій.</p>
-                    <h5>ПІБ власника:</h5>
+                    
                     <div class="row">
                         <form class="col s12">
+                            <h6 class="grey-text text-darken-1">ПІБ власника:</h6>
                             <div class="row">
                                 <div class="input-field col s12 l4">
                                     <i class="material-icons prefix">perm_identity</i>
@@ -102,6 +103,7 @@
                                     <label for="home_middle_name">По-батькові</label>
                                 </div>
                             </div>
+                            <h6 class="grey-text text-darken-1">Контакти:</h6>
                             <div class="row">
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">phone</i>
@@ -114,28 +116,45 @@
                                     <label for="home_email" data-error="невірний email">Email-адреса</label>
                                 </div>
                             </div>
+                            <h6 class="grey-text text-darken-1">Адреса:</h6>
                             <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix">mode_edit</i>
-                                    <textarea  id="fighter_wound-field" class="materialize-textarea validate"></textarea>
-                                    <label  tooltipped  for="fighter_wound-field"  data-position="left" data-delay="50" data-tooltip="Опишіть себе або своє поранення.">Коротко про себе:</label>
+                                <div class="input-field col s12 m4">
+                                    <i class="material-icons prefix">location_on</i>
+                                    <input id="home_region" type="text" class="validate">
+                                    <label for="home_region">Область</label>
+                                </div>
+                                <div class="input-field col s12 m4">
+                                    <i class="material-icons prefix">location_on</i>
+                                    <input id="home_city" type="text" class="validate">
+                                    <label for="home_city">Населений пункт</label>
+                                </div>
+                                <div class="input-field col s12 m4">
+                                    <i class="material-icons prefix">location_on</i>
+                                    <input id="home_street" type="text" class="validate">
+                                    <label for="home_street">Вулиця</label>
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="input-field col s12 m3 offset-m3">
+                                    <i class="material-icons prefix">location_on</i>
+                                    <input id="home_building" type="text" class="validate">
+                                    <label for="home_building">Будинок</label>
+                                </div>
+                                <div class="input-field col s12 m3">
+                                    <i class="material-icons prefix">location_on</i>
+                                    <input id="home_apartment" type="text" class="validate">
+                                    <label for="home_apartment">Квартира</label>
+                                </div>
+                            </div>
+                            <div class="row center">
                                 <div class="col s12">
-                                    <form action="#">
-                                        <div class="file-field input-field">
-                                            <div class="waves-effect waves-light btn light-blue lighten-1">
-                                                <span>Завантажити фото</span>
-                                                <input type="file">
-                                            </div>
-                                            <div class="file-path-wrapper">
-                                                <input class="file-path validate" type="text">
-                                            </div>
-                                        </div>
-                                    </form>
+                                    <p class="center">
+                                        <input type="checkbox" id="home_rules">
+                                        <label for="home_rules">Я ознайомлений з <a href="#/about">правилами</a></label>
+                                    </p>
                                 </div>
                             </div>
+
                             <div class="row center">
                                 <div class="col s12">
                                     <a href="#/" class="waves-effect waves-light btn red lighten-3" message="Реєстрація успішно завершена!" duration="3000" toast='click'>Зареєструвати</a>
@@ -149,9 +168,9 @@
                 <div class="col s12" id="test3">
                     <h4  class="center light-blue-text text-lighten-1">Зареєструвати благодійну організацію</h4>
                     <p class="center">Вкажіть деякі необхідні дані про організацію, а також контакти для продуктивного спілкування.</p>
-                    <h5 tooltipped data-position="left" data-delay="50" data-tooltip="Або ПІБ контактного лиця">ПІБ менеджера:</h5>
                     <div class="row">
                         <form class="col s12">
+                            <h6 class="grey-text text-darken-1" tooltipped data-position="left" data-delay="50" data-tooltip="Або ПІБ контактного лиця">ПІБ менеджера:</h6>
                             <div class="row">
                                 <div class="input-field col s12 l4">
                                     <i class="material-icons prefix">perm_identity</i>
@@ -169,6 +188,7 @@
                                     <label for="org_middle_name">По-батькові</label>
                                 </div>
                             </div>
+                            <h6 class="grey-text text-darken-1">Контакти:</h6>
                             <div class="row">
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">phone</i>
@@ -181,11 +201,17 @@
                                     <label for="org_email" data-error="невірний email">Email-адреса</label>
                                 </div>
                             </div>
+                            <h6 class="grey-text text-darken-1">Додаткова інформація:</h6>
                             <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix">mode_edit</i>
-                                    <textarea  id="fighter_wound-field" class="materialize-textarea validate"></textarea>
-                                    <label  tooltipped  for="fighter_wound-field"  data-position="left" data-delay="50" data-tooltip="Опишіть себе або своє поранення.">Коротко про себе:</label>
+                                <div class="input-field col s12 m6">
+                                    <i class="material-icons prefix">perm_identity</i>
+                                    <input id="org_name" type="text" class="validate">
+                                    <label for="org_name">Назва благодійної організації</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <i class="material-icons prefix">perm_identity</i>
+                                    <input id="org_city" type="text" class="validate">
+                                    <label for="org_city"  tooltipped data-position="left" data-delay="50" data-tooltip="Де діє благодійна організація (або знаходится головний офіс)">Назва населеного пункту</label>
                                 </div>
                             </div>
                             <div class="row">
@@ -201,6 +227,14 @@
                                             </div>
                                         </div>
                                     </form>
+                                </div>
+                            </div>
+                            <div class="row center">
+                                <div class="col s12">
+                                    <p class="center">
+                                        <input type="checkbox" id="org_rules">
+                                        <label for="org_rules">Я ознайомлений з <a href="#/about">правилами</a></label>
+                                    </p>
                                 </div>
                             </div>
                             <div class="row center">
