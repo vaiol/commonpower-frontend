@@ -226,6 +226,7 @@ textarea.materialize-textarea:focus:not([readonly]), .input-field input[type=tex
 } 
 
 
+
 /* valid color */
 textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid, .input-field input[type=text].valid, .input-field input[type=email].valid  {
   border-bottom: 1px solid #29B6F6;
@@ -233,13 +234,12 @@ textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid, 
 }
 
 
-textarea
+
 /* invalid color */
-.input-field input[type=text].invalid, .input-field input[type=email].invalid {
+.input-field input[type=text].invalid, .input-field input[type=text].ng-invalid-pattern, .input-field input[type=text].ng-invalid-minlength, .input-field input[type=text].ng-invalid-maxlength, .input-field input[type=email].invalid {
   border-bottom: 1px solid #F00;
   box-shadow: 0 1px 0 0 #F00;
 }
-
 
 .grey-block {
   padding-top: 40px;
@@ -253,4 +253,21 @@ textarea
 
 #help-button.active {
   background: #0AA7EB;
+}
+
+.animate-show {
+  line-height: 20px;
+  opacity: 1;
+}
+
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
 }

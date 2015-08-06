@@ -12,69 +12,79 @@
                 <div class="col s12" id="test1">
                     <h4 class="center light-blue-text text-lighten-1">Зареєструвати бійця</h4>
                     <p class="center">Вкажіть свої контактні данні. Після ретельної обробки ми з вами зв'яжемося для подальших дій.</p>
-                    
                     <div class="row">
-                        <form class="col s12">
+
+
+
+
+                        <form class="col s12" name="FighterForm" novalidate>
                             <h6 class="grey-text text-darken-1">ПІБ бійця:</h6>
                             <div class="row">
                                 <div class="input-field col s12 l4">
                                     <i class="material-icons prefix">perm_identity</i>
-                                    <input id="fighter_last_name" type="text" class="validate">
-                                    <label for="fighter_last_name">Прізвище</label>
+                                    <input type="text" id="fln" class="validate" length="64" ng-model="fighter.lastName" required>
+                                    <label for="fln">Прізвище</label>
                                 </div>
                                 <div class="input-field col s12 l4">
                                     <i class="material-icons prefix">perm_identity</i>
-                                    <input id="fighter_first_name" type="text" class="validate">
-                                    <label for="fighter_first_name">Ім'я</label>
+                                    <input type="text" id="ffn" class="validate" length="64" ng-model="fighter.firstName" required>
+                                    <label for="ffn">Ім'я</label>
                                 </div>
                                 <div class="input-field col s12 l4">
                                     <i class="material-icons prefix">perm_identity</i>
-                                    <input id="fighter_middle_name" type="text" class="validate">
-                                    <label for="fighter_middle_name">По-батькові</label>
+                                    <input type="text" id="fmn" class="validate" length="64" ng-model="fighter.middleName" required>
+                                    <label for="fmn">По-батькові</label>
                                 </div>
                             </div>
                             <h6 class="grey-text text-darken-1">Контакти:</h6>
                             <div class="row">
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">phone</i>
-                                    <input id="fighter_phone" type="text" class="validate">
-                                    <label for="fighter_phone">Контакнтний телефон</label>
+                                    <input type="text" id="fp" class="validate" length="20" ng-model="fighter.phone" name="fighterPhone" ng-pattern="/[+(]?(\d+[ .\-()]*)+/" ng-minLength="7" ng-maxlength="20" required>
+                                    <label for="fp">Контакнтний телефон</label>
+                                    <span class="error-msg red-text animate-show" ng-show="updateFields()">Too short!</span>
                                 </div>
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">email</i>
-                                    <input id="fighter_email" type="email" class="validate">
-                                    <label for="fighter_email" data-error="невірний email">Email-адреса</label>
+                                    <input type="email" id="fe" class="validate" ng-model="fighter.email" required>
+                                    <label for="fe" data-error="невірний email">Email-адреса</label>
                                 </div>
                             </div>
                             <h6 class="grey-text text-darken-1">Додаткова інформація:</h6>
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">mode_edit</i>
-                                    <textarea  id="fighter_wound-field" class="materialize-textarea validate"></textarea>
-                                    <label  tooltipped  for="fighter_wound-field"  data-position="left" data-delay="50" data-tooltip="Опишіть себе або своє поранення.">Коротко про себе:</label>
+                                    <textarea id="fw" class="materialize-textarea validate" ng-model="fighter.info"></textarea>
+                                    <label tooltipped  for="fw" data-position="left" data-delay="50" data-tooltip="Опишіть себе або своє поранення.">Коротко про себе:</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col s12">
-                                    <form action="#">
-                                        <div class="file-field input-field">
-                                            <div class="waves-effect waves-light btn light-blue lighten-1">
-                                                <span>Завантажити фото</span>
-                                                <input type="file">
-                                            </div>
-                                            <div class="file-path-wrapper">
-                                                <input class="file-path validate" type="text">
-                                            </div>
+                                    <div input-field class="file-field ">
+                                        <div class="waves-effect waves-light btn light-blue lighten-1">
+                                            <span>Завантажити фото</span>
+                                            <input type="file">
                                         </div>
-                                    </form>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row center">
-                                <div class="col s12">
-                                    <a href="#/" class="waves-effect waves-light btn red lighten-3" message="Реєстрація успішно завершена!" duration="3000" toast='click'>Зареєструвати</a>
+                                <div input-field  class="col s12">
+                                    <input type="submit" class="waves-effect waves-light btn red lighten-3" name="submit_2" value="Зареєструвати"  ng-disabled="FighterForm.$invalid" message="Реєстрація успішно завершена!" ng-click="submit(fighter)" duration="3000" toast='click'>
                                 </div>
                             </div>
                         </form>
+
+
+
+
+
+
+
+
                     </div>
                 </div>
 
@@ -157,7 +167,7 @@
                             <div class="row center">
                                 <div class="col s12">
                                    <!--  <a href="#/" class="waves-effect waves-light btn red lighten-3" message="Реєстрація успішно завершена!" duration="3000" toast='click'>Зареєструвати</a> -->
-                                   <input type="submit" class="waves-effect waves-light btn red lighten-3" name="submit_1" value="Зареєструвати" message="Реєстрація успішно завершена!" duration="3000" toast='click'>
+                                   <input type="submit" class="waves-effect waves-light btn red lighten-3" name="submit_2" value="Зареєструвати"  ng-disabled="LovelyForm.$invalid" message="Реєстрація успішно завершена!" duration="3000" toast='click'>
                                 </div>
                             </div>
                         </form>
