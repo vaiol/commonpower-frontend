@@ -298,6 +298,28 @@ textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid, 
   padding: 0 10px;
 }
 
+.ng-hide-add, .ng-hide-remove {
+  transition: 0.5s linear all;
+}
+
+.animate-hide {
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+  line-height: 20px;
+  opacity: 1;
+  padding: 10px;
+  background: white;
+}
+
+.animate-hide.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+
+
+
 .switch label input[type=checkbox]:checked + .lever {
   background-color: #FFAB40; }
 

@@ -5,6 +5,7 @@
     "angular-resource": null,
     "angular-route": null,
     "angular-mocks": null,
+    "angular-animate": null,
     "materialize": null,
     "angular-utils-pagination": null,
     "angular-materialize": null,

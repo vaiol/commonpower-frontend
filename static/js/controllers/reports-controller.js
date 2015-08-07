@@ -23,7 +23,7 @@
             $scope.total = (news.page.size * news.page.totalPages);
             if (currentPage != pageNumber) {
                 currentPage = pageNumber;
-                
+
                 $location.hash("top-row");
                 $anchorScroll();
             }
