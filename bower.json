@@ -7,6 +7,7 @@
     "angular-mocks": null,
     "materialize": null,
     "angular-utils-pagination": null,
-    "angular-materialize": null
+    "angular-materialize": null,
+    "ngInfiniteScroll": null
   }
 }

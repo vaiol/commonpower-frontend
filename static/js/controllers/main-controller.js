@@ -1,4 +1,4 @@
-﻿var myApp = angular.module('myApp', [ 'ngRoute', 'angularUtils.directives.dirPagination', 'ui.materialize']);
+﻿var myApp = angular.module('myApp', [ 'ngRoute', 'angularUtils.directives.dirPagination', 'ui.materialize', 'infinite-scroll']);
 
 myApp.config(function($routeProvider, $httpProvider) {
     $routeProvider.when('/', {

@@ -297,3 +297,9 @@ textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid, 
   opacity: 0;
   padding: 0 10px;
 }
+
+.switch label input[type=checkbox]:checked + .lever {
+  background-color: #FFAB40; }
+
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: #FF9717; }
