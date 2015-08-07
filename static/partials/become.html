@@ -3,9 +3,9 @@
         <div class="row">
             <div class="col s12">
                 <ul class="tabs" tabs>
-                    <li class="tab col s4"><a class="active light-blue-text" href="#test1">Боєць</a></li>
-                    <li class="tab col s4"><a class="light-blue-text"  href="#test2">Житло</a></li>
-                    <li class="tab col s4"><a class="light-blue-text"  href="#test3">Організація</a></li>
+                    <li class="tab col s4"><a class="active amber-text text-darken-2" href="#test1">Боєць</a></li>
+                    <li class="tab col s4"><a class=" amber-text text-darken-2"  href="#test2">Житло</a></li>
+                    <li class="tab col s4"><a class=" amber-text text-darken-2"  href="#test3">Організація</a></li>
                 </ul>
             </div>
             <div class="container-xl">
@@ -13,10 +13,6 @@
                     <h4 class="center light-blue-text text-lighten-1">Зареєструвати бійця</h4>
                     <p class="center">Вкажіть свої контактні данні. Після ретельної обробки ми з вами зв'яжемося для подальших дій.</p>
                     <div class="row">
-
-
-
-
                         <form class="col s12" name="FighterForm" novalidate>
                             <h6 class="grey-text text-darken-1">ПІБ бійця:</h6>
                             <div class="row">
@@ -40,7 +36,9 @@
                             <div class="row">
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">phone</i>
-                                    <input type="text" id="fp" class="validate" length="20" ng-model="fighter.phone" name="fighterPhone" ng-pattern="/[+(]?(\d+[ .\-()]*)+/" ng-minLength="7" ng-maxlength="20" required>
+                                    <input
+                                    tooltipped  data-position="left" data-delay="400" data-tooltip="Валідація номеру містить баг!"
+                                    type="text" id="fp" class="validate" length="20" ng-model="fighter.phone" name="fighterPhone" ng-pattern="/[+(]?(\d+[ .\-()]*)+/" ng-minLength="7" ng-maxlength="20" required>
                                     <label for="fp">Контакнтний телефон</label>
                                     <span class="error-msg red-text animate-show" ng-show="updateFields()">Too short!</span>
                                 </div>
@@ -55,13 +53,14 @@
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">mode_edit</i>
                                     <textarea id="fw" class="materialize-textarea validate" ng-model="fighter.info"></textarea>
-                                    <label tooltipped  for="fw" data-position="left" data-delay="50" data-tooltip="Опишіть себе або своє поранення.">Коротко про себе:</label>
+                                    <label for="fw" tooltipped  data-position="left" data-delay="20" data-tooltip="Опишіть себе або своє поранення.">Коротко про себе:</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col s12">
                                     <div input-field class="file-field ">
-                                        <div class="waves-effect waves-light btn light-blue lighten-1">
+                                        <div class="waves-effect waves-light btn light-blue lighten-1"
+                                         tooltipped  data-position="left" data-delay="20" data-tooltip="Не працює на данний момент!">
                                             <span>Завантажити фото</span>
                                             <input type="file">
                                         </div>
@@ -72,19 +71,11 @@
                                 </div>
                             </div>
                             <div class="row center">
-                                <div input-field  class="col s12">
-                                    <input type="submit" class="waves-effect waves-light btn red lighten-3" name="submit_2" value="Зареєструвати"  ng-disabled="FighterForm.$invalid" message="Реєстрація успішно завершена!" ng-click="submit(fighter)" duration="3000" toast='click'>
+                                <div class="input-field col s12">
+                                    <input type="submit" class="waves-effect waves-light btn red lighten-3" name="submit_1" value="Зареєструвати"  ng-disabled="FighterForm.$invalid" message="Реєстрація успішно завершена!" ng-click="submit(fighter)" duration="3000" toast='click'>
                                 </div>
                             </div>
                         </form>
-
-
-
-
-
-
-
-
                     </div>
                 </div>
 
@@ -94,80 +85,82 @@
                     <p class="center">Вкажіть контактні данні власника, а також короткі відомості про житло. Після ретельної обробки ми з вами зв'яжемося для подальших дій.</p>
                     
                     <div class="row">
-                        <form class="col s12">
+                        <form class="col s12" name="OwnerForm" novalidate>
                             <h6 class="grey-text text-darken-1">ПІБ власника:</h6>
                             <div class="row">
                                 <div class="input-field col s12 l4">
                                     <i class="material-icons prefix">perm_identity</i>
-                                    <input id="home_last_name" type="text" class="validate">
-                                    <label for="home_last_name">Прізвище</label>
+                                    <input type="text" id="oln" class="validate" ng-model="owner.lastName" required>
+                                    <label for="oln">Прізвище</label>
                                 </div>
                                 <div class="input-field col s12 l4">
                                     <i class="material-icons prefix">perm_identity</i>
-                                    <input id="home_first_name" type="text" class="validate">
-                                    <label for="home_first_name">Ім'я</label>
+                                    <input type="text" id="ofn" class="validate" ng-model="owner.firstName" required>
+                                    <label for="ofn">Ім'я</label>
                                 </div>
                                 <div class="input-field col s12 l4">
                                     <i class="material-icons prefix">perm_identity</i>
-                                    <input id="home_middle_name" type="text" class="validate">
-                                    <label for="home_middle_name">По-батькові</label>
+                                    <input type="text" id="omn" class="validate" ng-model="owner.middleName" required>
+                                    <label for="omn">По-батькові</label>
                                 </div>
                             </div>
                             <h6 class="grey-text text-darken-1">Контакти:</h6>
                             <div class="row">
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">phone</i>
-                                    <input id="home_phone" type="text" class="validate">
-                                    <label for="home_phone">Контакнтний телефон</label>
+                                    <input
+                                    tooltipped  data-position="left" data-delay="400" data-tooltip="Валідація номеру містить баг!"
+                                    type="text" id="op" class="validate" length="20" ng-model="owner.phone" name="ownerPhone" ng-pattern="/[+(]?(\d+[ .\-()]*)+/" ng-minLength="7" ng-maxlength="20" required>
+                                    <label for="op">Контакнтний телефон</label>
+                                    <span class="error-msg red-text animate-show" ng-show="updateFields()">Too short!</span>
                                 </div>
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">email</i>
-                                    <input id="home_email" type="email" class="validate">
-                                    <label for="home_email" data-error="невірний email">Email-адреса</label>
+                                    <input type="email" id="oe" class="validate" ng-model="owner.email" required>
+                                    <label for="oe" data-error="невірний email">Email-адреса</label>
                                 </div>
                             </div>
                             <h6 class="grey-text text-darken-1">Адреса:</h6>
                             <div class="row">
                                 <div class="input-field col s12 m4">
                                     <i class="material-icons prefix">location_on</i>
-                                    <input id="home_region" type="text" class="validate">
-                                    <label for="home_region">Область</label>
+                                    <input type="text" id="or" class="validate" ng-model="owner.region" required>
+                                    <label for="or">Область</label>
                                 </div>
                                 <div class="input-field col s12 m4">
                                     <i class="material-icons prefix">location_on</i>
-                                    <input id="home_city" type="text" class="validate">
-                                    <label for="home_city">Населений пункт</label>
+                                    <input type="text" id="oc" class="validate" ng-model="owner.city" required>
+                                    <label for="oc">Населений пункт</label>
                                 </div>
                                 <div class="input-field col s12 m4">
                                     <i class="material-icons prefix">location_on</i>
-                                    <input id="home_street" type="text" class="validate">
-                                    <label for="home_street">Вулиця</label>
+                                    <input type="text" id="os" class="validate" ng-model="owner.street" required>
+                                    <label for="os">Вулиця</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 m3 offset-m3">
                                     <i class="material-icons prefix">location_on</i>
-                                    <input id="home_building" type="text" class="validate">
-                                    <label for="home_building">Будинок</label>
+                                    <input type="text" id="ob" class="validate" ng-model="owner.building" required>
+                                    <label for="ob">Будинок</label>
                                 </div>
                                 <div class="input-field col s12 m3">
                                     <i class="material-icons prefix">location_on</i>
-                                    <input id="home_apartment" type="text" class="validate">
-                                    <label for="home_apartment">Квартира</label>
+                                    <input type="text" id="oa" class="validate" ng-model="owner.appartment">
+                                    <label for="oa">Квартира</label>
                                 </div>
                             </div>
                             <div class="row center">
                                 <div class="col s12">
                                     <p class="center">
-                                        <input type="checkbox" id="home_rules">
-                                        <label for="home_rules">Я ознайомлений з <a href="#/about">правилами</a></label>
+                                        <input type="checkbox" id="oar"  ng-model="owner.agreement" required>
+                                        <label for="oar">Я ознайомлений з <a href="#/about">правилами</a></label>
                                     </p>
                                 </div>
                             </div>
                             <div class="row center">
-                                <div class="col s12">
-                                   <!--  <a href="#/" class="waves-effect waves-light btn red lighten-3" message="Реєстрація успішно завершена!" duration="3000" toast='click'>Зареєструвати</a> -->
-                                   <input type="submit" class="waves-effect waves-light btn red lighten-3" name="submit_2" value="Зареєструвати"  ng-disabled="LovelyForm.$invalid" message="Реєстрація успішно завершена!" duration="3000" toast='click'>
+                                <div class="input-field col s12">
+                                    <input type="submit" class="waves-effect waves-light btn red lighten-3" name="submit_2" value="Зареєструвати"  ng-disabled="OwnerForm.$invalid" message="Реєстрація успішно завершена!" ng-click="submit(owner)" duration="3000" toast='click'>
                                 </div>
                             </div>
                         </form>
@@ -176,80 +169,82 @@
 
 
                 <div class="col s12" id="test3">
-                    <h4  class="center light-blue-text text-lighten-1">Зареєструвати благодійну організацію</h4>
+                    <h4 class="center light-blue-text text-lighten-1">Зареєструвати благодійну організацію</h4>
                     <p class="center">Вкажіть деякі необхідні дані про організацію, а також контакти для продуктивного спілкування.</p>
                     <div class="row">
-                        <form class="col s12">
+                        <form class="col s12" name="OrganizationForm" novalidate>
                             <h6 class="grey-text text-darken-1" tooltipped data-position="left" data-delay="50" data-tooltip="Або ПІБ контактного лиця">ПІБ менеджера:</h6>
                             <div class="row">
                                 <div class="input-field col s12 l4">
                                     <i class="material-icons prefix">perm_identity</i>
-                                    <input id="org_last_name" type="text" class="validate">
-                                    <label for="org_last_name">Прізвище</label>
+                                    <input type="text" id="orln" class="validate" ng-model="organization.lastName" required>
+                                    <label for="orln">Прізвище</label>
                                 </div>
                                 <div class="input-field col s12 l4">
                                     <i class="material-icons prefix">perm_identity</i>
-                                    <input id="org_first_name" type="text" class="validate">
-                                    <label for="org_first_name">Ім'я</label>
+                                    <input type="text" id="orfn" class="validate" ng-model="organization.firstName" required>
+                                    <label for="orfn">Ім'я</label>
                                 </div>
                                 <div class="input-field col s12 l4">
                                     <i class="material-icons prefix">perm_identity</i>
-                                    <input id="org_middle_name" type="text" class="validate">
-                                    <label for="org_middle_name">По-батькові</label>
+                                    <input type="text" id="ormn" class="validate" ng-model="organization.middleName" required>
+                                    <label for="ormn">По-батькові</label>
                                 </div>
                             </div>
                             <h6 class="grey-text text-darken-1">Контакти:</h6>
                             <div class="row">
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">phone</i>
-                                    <input id="org_phone" type="text" class="validate">
-                                    <label for="org_phone">Контакнтний телефон</label>
+                                    <input
+                                    tooltipped  data-position="left" data-delay="400" data-tooltip="Валідація номеру містить баг!"
+                                    type="text" id="orp" class="validate" length="20" ng-model="organization.phone" name="organizationPhone" ng-pattern="/[+(]?(\d+[ .\-()]*)+/" ng-minLength="7" ng-maxlength="20" required>
+                                    <label for="orp">Контакнтний телефон</label>
+                                    <span class="error-msg red-text animate-show" ng-show="updateFields()">Too short!</span>
                                 </div>
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">email</i>
-                                    <input id="org_email" type="email" class="validate">
-                                    <label for="org_email" data-error="невірний email">Email-адреса</label>
+                                    <input type="email" id="ore" class="validate" ng-model="organization.email" required>
+                                    <label for="ore" data-error="невірний email">Email-адреса</label>
                                 </div>
                             </div>
                             <h6 class="grey-text text-darken-1">Додаткова інформація:</h6>
                             <div class="row">
                                 <div class="input-field col s12 m6">
                                     <i class="material-icons prefix">perm_identity</i>
-                                    <input id="org_name" type="text" class="validate">
-                                    <label for="org_name">Назва благодійної організації</label>
+                                    <input type="text" id="orn" class="validate" ng-model="organization.title" required>
+                                    <label for="orn">Назва благодійної організації</label>
                                 </div>
                                 <div class="input-field col s12 m6">
                                     <i class="material-icons prefix">perm_identity</i>
-                                    <input id="org_city" type="text" class="validate">
-                                    <label for="org_city"  tooltipped data-position="left" data-delay="50" data-tooltip="Де діє благодійна організація (або знаходится головний офіс)">Назва населеного пункту</label>
+                                    <input type="text" id="orc" class="validate" ng-model="organization.city" required>
+                                    <label for="orc" tooltipped data-position="left" data-delay="50" data-tooltip="Де діє благодійна організація (або знаходится головний офіс).">Назва населеного пункту</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col s12">
-                                    <form action="#">
-                                        <div class="file-field input-field">
-                                            <div class="waves-effect waves-light btn light-blue lighten-1">
-                                                <span>Завантажити лого</span>
-                                                <input type="file">
-                                            </div>
-                                            <div class="file-path-wrapper">
-                                                <input class="file-path validate" type="text">
-                                            </div>
+                                    <div class="file-field input-field">
+                                        <div class="waves-effect waves-light btn light-blue lighten-1"
+                                         tooltipped  data-position="left" data-delay="20" data-tooltip="Не працює на данний момент">
+                                            <span>Завантажити лого</span>
+                                            <input type="file">
                                         </div>
-                                    </form>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row center">
                                 <div class="col s12">
                                     <p class="center">
-                                        <input type="checkbox" id="org_rules">
-                                        <label for="org_rules">Я ознайомлений з <a href="#/about">правилами</a></label>
+                                        <input type="checkbox" id="orar"  ng-model="organization.agreement" required>
+                                        <label for="orar">Я ознайомлений з <a href="#/about">правилами</a></label>
                                     </p>
                                 </div>
                             </div>
                             <div class="row center">
-                                <div class="col s12">
-                                    <a href="#/" class="waves-effect waves-light btn red lighten-3" message="Реєстрація успішно завершена!" duration="3000" toast='click'>Зареєструвати</a>
+                                <div class="input-field col s12">
+                                    <input type="submit" class="waves-effect waves-light btn red lighten-3" name="submit_3" value="Зареєструвати" ng-disabled="OrganizationForm.$invalid" message="Реєстрація успішно завершена!" ng-click="submit(organization)" duration="3000" toast='click'>
                                 </div>
                             </div>
                         </form>

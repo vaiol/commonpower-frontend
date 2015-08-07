@@ -1,11 +1,9 @@
-﻿myApp.controller('become', ['$scope', '$route', function($scope, $route) {
+﻿myApp.controller('become', ['$scope', '$route', '$location', function($scope, $route, $location) {
 	$scope.submit=function(fighter){
 		var m = {}
 		m = angular.copy(fighter);
-		console.log(m);
-		console.log(m.info);
-
         alert(angular.toJson(m));
+        $location.path('#/')
     }
 
     $scope.updateFields = function() {

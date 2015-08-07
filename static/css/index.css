@@ -229,42 +229,45 @@ footer.page-footer {
 
 /* label underline focus color */
 textarea.materialize-textarea:focus:not([readonly]), .input-field input[type=text]:focus, .input-field input[type=email]:focus {
-  border-bottom: 1px solid #FF9F9F;
-  box-shadow: 0 1px 0 0 #FF9F9F;
+  border-bottom: 1px solid #FFAB40 ;
+  box-shadow: 0 1px 0 0 #FFAB40 ;
 }
 
 
 
 /* icon prefix color */
 .input-field .prefix {
-  color: #FF9F9F;
+  color: #FFAB40 ;
 }
 
+.input-field .prefix {
+  color: #B4B4B4;
+}
 /* icon prefix focus color */
 .input-field .prefix.active {
-  color: #29B6F6;
+  color: #F98900;
 }
 
 
 /* label focus color */
  textarea.materialize-textarea:focus:not([readonly]) + label, .input-field input[type=text]:focus + label, .input-field input[type=email]:focus + label {
-  color: #FF9F9F;
+  color: #FFAB40 ;
 } 
 
 
 
 /* valid color */
 textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid, .input-field input[type=text].valid, .input-field input[type=email].valid  {
-  border-bottom: 1px solid #29B6F6;
-  box-shadow: 0 1px 0 0 #29B6F6;
+  border-bottom: 1px solid #81c784;
+  box-shadow: 0 1px 0 0 #81c784;
 }
 
 
 
 /* invalid color */
 .input-field input[type=text].invalid, .input-field input[type=text].ng-invalid-pattern, .input-field input[type=text].ng-invalid-minlength, .input-field input[type=text].ng-invalid-maxlength, .input-field input[type=email].invalid {
-  border-bottom: 1px solid #F00;
-  box-shadow: 0 1px 0 0 #F00;
+  border-bottom: 1px solid #ff8a80;
+  box-shadow: 0 1px 0 0 #ff8a80;
 }
 
 .grey-block {
@@ -325,3 +328,7 @@ textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid, 
 
 .switch label input[type=checkbox]:checked + .lever:after {
   background-color: #FF9717; }
+
+.indicator {
+  background-color: #FFAB40 !important;
+}
