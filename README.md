@@ -1,5 +1,5 @@
-<h1>Commonpower frontend<h1>
-<p>Frontend for web application using AngularJS and MaterializeCSS frameworks<p>
+<h1>Commonpower frontend</h1>
+<p>Frontend for web application using AngularJS and MaterializeCSS frameworks</p>
 
 <b>How to run:</b>
 <ul>
