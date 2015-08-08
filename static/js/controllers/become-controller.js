@@ -12,7 +12,6 @@
     	// console.log(bool2);
     	// console.log(bool1);
     	var bool3 = (bool1 && bool2);
-    	console.log(bool3);
     	return bool3;
     }
 }]);

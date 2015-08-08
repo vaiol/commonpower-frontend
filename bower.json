@@ -9,6 +9,7 @@
     "materialize": null,
     "angular-utils-pagination": null,
     "angular-materialize": null,
-    "ngInfiniteScroll": null
+    "ngInfiniteScroll": null,
+    "ngSmoothScroll": null
   }
 }

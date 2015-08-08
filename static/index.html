@@ -16,7 +16,7 @@
 </head>
 <body ng-app="myApp" ng-cloak class="ng-cloak" ng-controller="index">
     <header>
-        <div class="navbar-absolute">
+        <div class="navbar-absolute" id="header">
         <nav class="white" role="navigation">
             <div class="nav-wrapper container responsive-text"  ng-controller="widgetsController">
                 <a id="logo-container" href="#/" class="brand-logo">
@@ -77,6 +77,12 @@
 
     <main>
         <div class="ng-view" autoscroll="true"></div> 
+        <div class="fixed-action-btn btn-top" scroll-to="header" style="bottom: 45px; right: 24px;">
+            <a class="btn-floating btn-large red">
+              <i class="large material-icons">navigation</i>
+            </a>
+        </div>
+        
     </main>
     
 
@@ -127,9 +133,8 @@
 
     <!--  Scripts-->
 
-    
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    
     <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script>
@@ -137,6 +142,7 @@
     <script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
     <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/ngSmoothScroll/angular-smooth-scroll.min.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/controllers/main-controller.js"></script>
     <script type="text/javascript" src="js/controllers/home-controller.js"></script>
