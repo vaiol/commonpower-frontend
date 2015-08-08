@@ -410,3 +410,42 @@ html * {
 .indicator-item.active{
   background-color: #4caf50  !important;
 }
+
+.mar-top-10 {
+  margin-top: 10px;
+}
+.mar-top-50 {
+  margin-top: 50px;
+}
+
+.mar-noleft-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+.mar-noright-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.mar-bot-50 {
+  margin-bottom: 50px;
+}
+
+
+/*EDITOR*/
+#toolbar-container {
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #ccc;
+        padding: 5px 12px;
+        color: green;
+        font-weight: bold;
+      }
+      #editor-wrapper {
+        border: 1px solid #aaa;
+        box-shadow: 0 0 2px 2px #ddd;
+        margin: auto;
+        width: 960px;
+      }

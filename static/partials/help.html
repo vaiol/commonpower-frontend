@@ -1,13 +1,58 @@
 ﻿<div class="grey-block">
-	<div class="container white z-depth-1" style="border-radius: 2px;height:600px;">
-		<br><br><br><br><br><br><br><br>
-		<div class="row">
-			<div class="col s12">
-				<h6 class="center">Сторінка "Допомогти"</h6>
-				<h1 class="center red-text text-lighten-2">У РОЗРОБЦІ!</h1>
-				<h6 class="center">слідкуйте за <a href="#/reports">новинами</a> та будьте в курсі виходу нових сторінок</h6>
-			</div>
+	<div class="container white z-depth-1" style="border-radius: 2px;"><h3 class="light-blue-text text-lighten-2 center">HTML Editor (demo)</h3>
+	<div id="editor-wrapper">
+      <div id="toolbar-container">
+        <select title="Size" class="ql-size">
+          <option value="10px">Small</option>
+          <option value="13px" selected>Normal</option>
+          <option value="18px">Large</option>
+          <option value="32px">Huge</option>
+        </select>
+        <select title="Text Color" class="ql-color">
+          <option value="rgb(255, 255, 255)">&nbsp;</option>
+          <option value="rgb(0, 0, 0)" selected>&nbsp;</option>
+          <option value="rgb(255, 0, 0)">&nbsp;</option>
+          <option value="rgb(0, 0, 255)">&nbsp;</option>
+          <option value="rgb(0, 255, 0)">&nbsp;</option>
+          <option value="rgb(0, 128, 128)">&nbsp;</option>
+          <option value="rgb(255, 0, 255)">&nbsp;</option>
+          <option value="rgb(255, 255, 0)">&nbsp;</option>
+        </select>
+        <select title="Background Color" class="ql-background">
+          <option value="rgb(255, 255, 255)" selected>&nbsp;</option>
+          <option value="rgb(0, 0, 0)">&nbsp;</option>
+          <option value="rgb(255, 0, 0)">&nbsp;</option>
+          <option value="rgb(0, 0, 255)">&nbsp;</option>
+          <option value="rgb(0, 255, 0)">&nbsp;</option>
+          <option value="rgb(0, 128, 128)">&nbsp;</option>
+          <option value="rgb(255, 0, 255)">&nbsp;</option>
+          <option value="rgb(255, 255, 0)">&nbsp;</option>
+        </select>
+        <select title="Text Alignment" class="ql-align">
+          <option value="left" selected>&nbsp;</option>
+          <option value="center">&nbsp;</option>
+          <option value="right">&nbsp;</option>
+          <option value="justify">&nbsp;</option>
+        </select>
+        <span title="Bold" class="ql-format-button ql-bold"></span>
+        <span title="Italic" class="ql-format-button ql-italic"></span>
+        <span title="Underline" class="ql-format-button ql-underline"></span>
+        <span title="Strike" class="ql-format-button ql-strike"></span>
+        <span title="Link" class="ql-format-button ql-link"></span>
+        <span title="Image" class="ql-format-button ql-image"></span>
+        <span title="Bullet" class="ql-format-button ql-bullet"></span>
+        <span title="List" class="ql-format-button ql-list"></span>
+      </div>
+      <div id="editor-container" style="height:25em"> </div>
+    </div>
+	<div class="container">
+		<h3>HTML:</h3>
+	    <div id="editor-html-view"></div>
+
+	    <h3>HTML text:</h3>
+	    <textarea id="editor-html-text" style="width:100%"></textarea>
+			<div class="row nomar-bottom"></div>
 		</div>
-		<div class="row nomar-bottom"></div>
 	</div>
+    
 </div>
