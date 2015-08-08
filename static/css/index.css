@@ -380,3 +380,33 @@ html * {
 .pointer {
   cursor: pointer;
 }
+
+@media only screen and (min-width : 993px) {
+  .demo-img {
+    margin-top: 30px;} 
+  }
+.href-orange {
+  color: #ffab40;
+  -webkit-transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    -ms-transition: color .3s ease;
+    transition: color .3s ease;
+    text-transform: uppercase;
+    
+}
+
+.pad-20 {
+  padding: 20px;
+}
+.href-orange:hover {
+  color: #ffd8a6;
+}
+
+.indicator-item {
+  background-color: white !important;
+}
+
+.indicator-item.active{
+  background-color: #4caf50  !important;
+}

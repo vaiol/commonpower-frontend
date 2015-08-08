@@ -10,4 +10,11 @@
     }
     $scope.initialize = initialize;
     google.maps.event.addDomListener(window, 'load', initialize);
+    (function($){
+        $(function(){
+            $('.materialboxed').materialbox();
+            $('.slider').slider({full_width: true});
+        });
+    })(jQuery);
+    
 }]);
