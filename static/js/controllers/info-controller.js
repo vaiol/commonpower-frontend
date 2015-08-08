@@ -1,4 +1,4 @@
-﻿myApp.controller('contacts', ['$scope', function($scope) {
+﻿myApp.controller('info', ['$scope', function($scope) {
 	var initialize = function() {
         var mapCanvas = document.getElementById('map-canvas');
         var mapOptions = {
@@ -11,4 +11,3 @@
     $scope.initialize = initialize;
     google.maps.event.addDomListener(window, 'load', initialize);
 }]);
-

@@ -13,14 +13,10 @@ myApp.config(function($routeProvider, $httpProvider) {
         templateUrl : 'partials/become.html',
         controller : 'become',
         activetab: 'become'
-    }).when('/contacts', {
-        templateUrl : 'partials/contacts.html',
-        controller : 'contacts',
-        activetab: 'contacts'
-    }).when('/about', {
-        templateUrl : 'partials/about.html',
-        controller : 'about',
-        activetab: 'about'
+    }).when('/info', {
+        templateUrl : 'partials/info.html',
+        controller : 'info',
+        activetab: 'info'
     }).when('/search', {
         templateUrl : 'partials/search.html',
         controller : 'search',

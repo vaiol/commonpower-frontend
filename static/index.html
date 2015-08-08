@@ -34,11 +34,8 @@
                     <li ng-class="{active: $route.current.activetab == 'become'}">
                         <a href="#/become" ng-bind="pc.become"></a>
                     </li>
-                    <li ng-class="{active: $route.current.activetab == 'contacts'}">
-                        <a href="#/contacts" ng-bind="pc.header_contacts"></a>
-                    </li>
-                    <li ng-class="{active: $route.current.activetab == 'about'}">
-                        <a href="#/about" ng-bind="pc.header_about"></a>
+                    <li ng-class="{active: $route.current.activetab == 'info'}">
+                        <a href="#/info" ng-bind="pc.header_info"></a>
                     </li>
                     <li ng-class="{active: $route.current.activetab == 'search'}">
                         <a href="#/search"><i class="material-icons" id="searchh">search</i></a>
@@ -55,11 +52,8 @@
                     <li ng-class="{active: $route.current.activetab == 'become'}">
                         <a href="#/become" ng-bind="pc.become"></a>
                     </li>
-                    <li ng-class="{active: $route.current.activetab == 'contacts'}">
-                        <a href="#/contacts" ng-bind="pc.header_contacts"></a>
-                    </li>
-                    <li ng-class="{active: $route.current.activetab == 'about'}">
-                        <a href="#/about" ng-bind="pc.header_about"></a>
+                    <li ng-class="{active: $route.current.activetab == 'info'}">
+                        <a href="#/info" ng-bind="pc.header_info"></a>
                     </li>
                     <li ng-class="{active: $route.current.activetab == 'help'}" class="hide-on-med-and-up">
                         <a href="#/help" ng-bind="pc.header_help"></a>
@@ -68,7 +62,7 @@
                         <a href="#/search"><i class="material-icons" id="searchh">search</i></a>
                     </li>
                 </ul>
-                <a href="#" data-activates="nav-mobile"  class="button-collapse light-blue-text text-lighten-1"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="nav-mobile" class="button-collapse light-blue-text text-lighten-1"><i class="material-icons">menu</i></a>
             
             </div>
         </nav>
@@ -77,8 +71,8 @@
 
     <main>
         <div class="ng-view" autoscroll="true"></div> 
-        <div class="fixed-action-btn btn-top" scroll-to="header" style="bottom: 45px; right: 24px;">
-            <a class="btn-floating btn-large red">
+        <div class="fixed-action-btn" scroll-to="header" style="bottom: 45px; right: 24px;">
+            <a class="btn-floating btn-large red btn-top waves-effect waves-light">
               <i class="large material-icons">navigation</i>
             </a>
         </div>
@@ -148,14 +142,8 @@
     <script type="text/javascript" src="js/controllers/home-controller.js"></script>
     <script type="text/javascript" src="js/controllers/reports-controller.js"></script>
     <script type="text/javascript" src="js/controllers/become-controller.js"></script>
-    <script type="text/javascript" src="js/controllers/contacts-controller.js"></script>
-    <script type="text/javascript" src="js/controllers/about-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/info-controller.js"></script>
     <script type="text/javascript" src="js/controllers/search-controller.js"></script>
     <script type="text/javascript" src="js/controllers/help-controller.js"></script>
-
-
-
-
-
 </body>
 </html>

@@ -41,8 +41,7 @@ var indexPageContent = {
     'header_help': 'Допомогти',
     'header_home': 'Головна',
     'header_reports': 'Звітність',
-    'header_contacts': 'Контакти',
-    'header_about': 'Про проект',
+    'header_info': 'Про проект',
     
     'footer_contacts': 'Наші контакти: ',
     'footer_phone': 'Телефон:',

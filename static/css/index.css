@@ -357,7 +357,7 @@ html * {
   -moz-transition: opacity .3s 0s, visibility 0s .3s;
   transition: opacity .3s 0s, visibility 0s .3s;
 }
-.btn-top.cd-is-visible, .btn-top.cd-fade-out, .no-touch .btn-top:hover {
+.btn-top.cd-is-visible, .btn-top.cd-fade-out {
   -webkit-transition: opacity .3s 0s, visibility 0s 0s;
   -moz-transition: opacity .3s 0s, visibility 0s 0s;
   transition: opacity .3s 0s, visibility 0s 0s;
@@ -371,24 +371,11 @@ html * {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
   opacity: .5;
 }
-.no-touch .btn-top:hover {
-  background-color: #e86256;
+.btn-top:hover {
+  background-color: #f44336;
   opacity: 1;
 }
-@media only screen and (min-width: 601px) {
-  .btn-top {
-    right: 20px;
-    bottom: 20px;
-  }
-}
-@media only screen and (min-width: 993px) {
-  .btn-top {
-    height: 60px;
-    width: 60px;
-    right: 30px;
-    bottom: 30px;
-  }
-}
+
 
 .pointer {
   cursor: pointer;
