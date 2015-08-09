@@ -88,6 +88,7 @@ var truncateOrganizations = function(organizations) {
     };
     if(orgList.length < maximumOrganiztions) {
         var demoOrganization = {
+            "link": "#/become/organization",
             "img": "image/fond-logo-6.png"
         }
         for (var i = orgList.length; i < maximumOrganiztions; i++) {

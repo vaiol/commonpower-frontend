@@ -1,15 +1,16 @@
 {
-  "name": "commonpower-app",
+ "name": "commonpower-app",
   "dependencies": {
     "angular": null,
     "angular-resource": null,
     "angular-route": null,
     "angular-mocks": null,
     "angular-animate": null,
-    "materialize": null,
     "angular-utils-pagination": null,
     "angular-materialize": null,
     "ngInfiniteScroll": null,
-    "ngSmoothScroll": null
+    "ngSmoothScroll": null,
+    "materialize": null,
+    "material-design-icons": null
   }
 }

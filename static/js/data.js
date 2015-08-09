@@ -112,14 +112,19 @@ var benefactorsList = [{
 }]
 
 var organizations = [{
+    "link": "#/",
     "img": "image/fond-logo-1.jpg"
 },{
+    "link": "#/",
     "img": "image/fond-logo-2.jpg"
 },{
+    "link": "#/",
     "img": "image/fond-logo-3.jpg"
 },{
+    "link": "#/",
     "img": "image/fond-logo-4.jpg"
 },{
+    "link": "#/",
     "img": "image/fond-logo-5.jpg"
 }]
 

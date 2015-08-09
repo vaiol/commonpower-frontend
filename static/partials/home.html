@@ -120,18 +120,18 @@
     <h3 class="center light-blue-text text-lighten-1" ng-bind="pc.c6_header"></h3>
     <div class="row hide-on-med-and-down valign-wrapper">
         <div class="col s4 l2 valign" ng-repeat="org in organizations track by $index">
-            <img ng-src="{{org.img}}" alt="fond-logo" class="responsive-img">
+            <a href="{{org.link}}"><img ng-src="{{org.img}}" alt="fond-logo" class="responsive-img"></a>
         </div>
     </div>
 
     <div class="row valign-wrapper hide-on-large-only">
         <div class="col s4 valign" ng-repeat="org in organizationsP1 track by $index">
-            <img ng-src="{{org.img}}" alt="fond-logo" class="responsive-img">
+            <a href="{{org.link}}"><img ng-src="{{org.img}}" alt="fond-logo" class="responsive-img"></a>
         </div>
     </div>
     <div class="row valign-wrapper hide-on-large-only">
         <div class="col s4 valign" ng-repeat="org in organizationsP2 track by $index">
-            <img ng-src="{{org.img}}" alt="fond-logo" class="responsive-img">
+            <a href="{{org.link}}"><img ng-src="{{org.img}}" alt="fond-logo" class="responsive-img"></a>
         </div>
     </div>
 </div>

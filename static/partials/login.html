@@ -1,0 +1,35 @@
+﻿<div class="grey-block">
+	<div class="container" style="border-radius: 2px;height:600px;">		
+		<div class="row">
+			<div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3">
+				<form class="col s12 white z-depth-1" style="padding: 100px;"  name="LoginForm" novalidate>
+					<h4 
+						class="card-title blue-text text-lighten-2 center" 
+						style="font-size: 3em;font-weight: 500;">Вхід</h4>
+                    <h6 class="grey-text text-darken-1 center">Вхід можливий тільки для координаторів!</h6>
+                    <div class="row">
+                    	<div class="col s12 input-field">
+                    		<i class="material-icons prefix">perm_identity</i>
+                    		<input type="text" id="al" class="validate" length="64" ng-model="admin.login" required>
+                    		<label for="al">Login</label> 
+                    	</div>
+                    </div>
+                    <div class="row">
+                    	<div class="col s12 input-field">
+                    		<i class="material-icons prefix">perm_identity</i>
+                    		<input type="text" id="ap" class="validate" length="64" ng-model="admin.password" required>
+                    		<label for="ap">Password</label> 
+                    	</div>
+                    </div> 
+                    <div class="row center">
+                    	<div class="col s12 input-field">
+                    		<input type="submit" class="waves-effect waves-light btn red lighten-3" name="submit_login" value="Увійти" ng-disabled="LoginForm.$invalid" message="Ви увійшли як координатор!" ng-click="login(admin)" duration="3000" toast='click'>
+                    	</div>
+                    </div>
+                </form>
+			</div>
+		</div>
+		 <br><br><br><br>
+		<div class="row nomar-bottom"></div>
+	</div>
+</div>
